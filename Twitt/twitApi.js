@@ -10,7 +10,7 @@ const T = new Twit({
 
 const get_tweets_helper = (hashtag,id,count,since_id = -1)=>{
     return new Promise((resolve,reject)=>{ 
-        let params = {q: `${hashtag}`, count:count, lang:'en'};
+        let params = {q: `${hashtag}`, count:count, lang:'en',tweet_mode : 'extended'};
         if(id != -1)
             params['max_id'] = `${id}`;
         if(since_id != -1)params['since_id'] = `${since_id}`;
@@ -43,7 +43,7 @@ const get_tweets = async (hashtag,max_tweets,since_id = -1)=>{
 // });
 const get_user_tweets_helper = (user,count=200,max_id = -1,since_id = -1)=>{
     return new Promise((resolve,reject)=>{
-        let params = {screen_name : user,count : count};
+        let params = {screen_name : user,count : count,tweet_mode : 'extended'};
         if(since_id != -1)params['since_id'] = `${since_id}`;
         if(max_id != -1)params['max_id'] = `${max_id}`;
         T.get('statuses/user_timeline',params,(err,data)=>{
@@ -71,6 +71,8 @@ const get_user_tweets = async (user,max_tweets,since_id=-1)=>{
     }
     return tweets;
 }
+
+// get_tweets('narendramodi',111).then(data=>console.log(data.length))
 
 module.exports = {
     get_tweets : get_tweets,
