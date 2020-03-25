@@ -14,7 +14,10 @@ import { UserProfileComponent } from './modules/user-profile/user-profile.compon
 import {AuthGuard} from '../app/modules/auth/auth.guard'
 import { UserService } from './services/user.service';
 
-import {AuthInterceptor} from './modules/auth/auth.interceptor'
+import {AuthInterceptor} from './modules/auth/auth.interceptor';
+import { HomeComponent } from './modules/after-login/home/home.component';
+import { SearchComponent } from './modules/after-login/search/search.component';
+import { HeaderComponent } from './modules/after-login/home/header/header.component'
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import {AuthInterceptor} from './modules/auth/auth.interceptor'
     UserComponent,
     SignUpComponent,
     UserProfileComponent,
+    HomeComponent,
+    SearchComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
