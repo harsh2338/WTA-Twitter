@@ -1,5 +1,5 @@
 const express = require("express");
-const Tweet = require("../data_models/tweetSchema")
+const Tweet = require("../models/tweetSchema")
 const sentiment_analyzer = require('../sent_analysis');
 const router = express.Router();
 
