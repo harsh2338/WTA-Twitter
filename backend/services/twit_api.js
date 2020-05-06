@@ -38,9 +38,6 @@ const get_tweets = async (hashtag,max_tweets,since_id = -1)=>{
     return tweets;
 }
 
-// get_tweets('#coronavirus',112).then(data=>{
-//     console.log(data.length)
-// });
 const get_user_tweets_helper = (user,count=200,max_id = -1,since_id = -1)=>{
     return new Promise((resolve,reject)=>{
         let params = {screen_name : user,count : count,tweet_mode : 'extended'};
@@ -53,7 +50,6 @@ const get_user_tweets_helper = (user,count=200,max_id = -1,since_id = -1)=>{
     });
     
 }
-
 
 const get_user_tweets = async (user,max_tweets,since_id=-1)=>{
     let tweets = []
@@ -72,7 +68,11 @@ const get_user_tweets = async (user,max_tweets,since_id=-1)=>{
     return tweets;
 }
 
-// get_tweets('narendramodi',111).then(data=>console.log(data.length))
+// var stream = T.stream('statuses/filter', { track: 'apple', language : 'en'})
+
+// stream.on('tweet', function (tweet) {
+//   console.log(tweet.text)
+// })
 
 module.exports = {
     get_tweets : get_tweets,
