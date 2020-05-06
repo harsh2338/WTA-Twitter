@@ -1,4 +1,4 @@
-const twitApi = require('./twitApi');
+const twitApi = require('./twit_api');
 const sentiment = require('sentiment');
 
 const senti = new sentiment();
@@ -19,12 +19,12 @@ const sa = async (tag,max_tweets = 500)=>{
         data = await twitApi.get_user_tweets(tag,max_tweets);
 
     let tweet_data = [];
-    //let user_data = [];
     for(let tweet of data){
         let twt = {}
         for(let tm of tweet_metadata)
             twt[tm] = tweet[tm];
-        twt.full_text = tweet.retweeted_status.full_text
+        if('retweeted_status' in tweet)
+            twt['full_text'] = tweet.retweeted_status.full_text
         twt['user'] = {};
         for(let um of user_metadata)
             twt['user'][um] = tweet['user'][um];
@@ -40,11 +40,11 @@ module.exports = {
 
 // twitApi.get_user_tweets('narendramodi',111).then(data=>console.log(data.length))
 
-// sa('@narendramodi',111).then(data=>{
+// sa('#coronavirus',2050).then(data=>{
 //     let sum = 0
-//     console.log(data[0])
+//     console.log(data.length)
 //     for(d of data)
-//         sum += d.score.score;
+//         sum += d.score.comparative;
 //     console.log(sum/data.length);
 // })
 

@@ -1,6 +1,6 @@
 const express = require("express");
 const Tweet = require("../models/tweetSchema")
-const sentiment_analyzer = require('../sent_analysis');
+const sentiment_analyzer = require('../services/sent_analysis');
 const router = express.Router();
 
 router.get("/",async(req,res)=>{
