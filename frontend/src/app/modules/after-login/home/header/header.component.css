@@ -1,4 +1,7 @@
-header{
+  html{
+    scroll-behavior: smooth;
+  }
+  header{
     background-color: greenyellow;
     padding: 20px 0 ;
 }
@@ -7,3 +10,22 @@ ul li {
     display: inline-block;
     margin-right: 10px;
 }
+.sticky-nav {
+    width: 98%;
+      float: left;
+      padding: 10px;
+      width: 100%;
+      background: #eee;
+      margin-bottom: 20px;
+  }
+  .sticky-nav ul{padding:0px; margin:0px;}
+  .sticky-box-shadow {
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.5);
+    width: 100%;
+    background:#000!important;
+    color:#fff;
+  }
+  .sticky-nav  ul li{float: left;
+      margin-right: 20px;
+      list-style-type: none;
+  }

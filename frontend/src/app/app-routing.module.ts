@@ -10,7 +10,7 @@ import {AuthGuard} from '../app/modules/auth/auth.guard'
 import {SearchComponent} from '../app/modules/after-login/search/search.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'/login',pathMatch:'full'},
+  {path:'',redirectTo:'/home',pathMatch:'full'},
 
   {
     path:'login',component:UserComponent,

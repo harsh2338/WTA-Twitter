@@ -19,6 +19,9 @@ import { HomeComponent } from './modules/after-login/home/home.component';
 import { SearchComponent } from './modules/after-login/search/search.component';
 import { HeaderComponent } from './modules/after-login/home/header/header.component'
 
+
+import { StickyNavModule } from 'ng2-sticky-nav';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +37,8 @@ import { HeaderComponent } from './modules/after-login/home/header/header.compon
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    StickyNavModule
 
   ],
   providers: [{
