@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sockets Client</title>
+</head>
+<body>
+    <h1>Sockets</h1>
+    <button onclick="socket.disconnect()">STOP</button>
+    <button onclick="reconnect()">Connect</button><br><br>
+    <input type="text" placeholder="modi" id="q"><br><br>
+    <button onclick="submit()">submit</button>
+    <p id="tweets"></p>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+    <script>
+        let socket = io('http://localhost:3000/');
+        
+        socket.on('stream',(data)=>{
+            let tweets = document.getElementById('tweets')
+            tweets.innerHTML = data.tweet.text + "</br></br>" + tweets.innerHTML;
+        });
+
+        function reconnect(){
+            socket.connect();
+            submit();
+        }
+
+        function submit(){
+            socket.emit('rec',document.getElementById('q').value);
+        }
+    </script>
+</body>
+</html>

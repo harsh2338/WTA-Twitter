@@ -11,4 +11,4 @@ const tweetSchema = mongo.Schema({
     location : String
 })
 
-module.exports = mongo.model('tweet',tweetSchema);
+module.exports = mongo.model('Tweet',tweetSchema);
