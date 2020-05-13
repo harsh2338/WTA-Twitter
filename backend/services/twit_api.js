@@ -1,12 +1,4 @@
-const Twit = require('twit')
-
-const T = new Twit({
-    consumer_key:         'LV60XU9yM2NuEvQ6JDtnOxtx6',
-    consumer_secret:      'sA7Bbs3N5wO8BErROU0HdlP3Pu8TtghYgJ0za24yNcZuMEFUTc',
-    access_token:         '1234400186786406400-ov3B9C0xFbKwF54K96xKjBPpeRz9oc',
-    access_token_secret:  '4vnIPZKBZj3ULB3BMMD1CVgNCSz8QmtDJe95UqySwI44L',
-    
-});
+const T = require('../config/twit_config');
 
 const get_tweets_helper = (hashtag,id,count,since_id = -1)=>{
     return new Promise((resolve,reject)=>{ 
@@ -68,13 +60,7 @@ const get_user_tweets = async (user,max_tweets,since_id=-1)=>{
     return tweets;
 }
 
-// var stream = T.stream('statuses/filter', { track: 'apple', language : 'en'})
-
-// stream.on('tweet', function (tweet) {
-//   console.log(tweet.text)
-// })
-
 module.exports = {
     get_tweets : get_tweets,
-    get_user_tweets : get_user_tweets
+    get_user_tweets : get_user_tweets,
 };
