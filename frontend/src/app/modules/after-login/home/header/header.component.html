@@ -2,10 +2,10 @@
     <nav class="sticky-nav" ngStickyNav stickyClass="sticky-box-shadow" ngStickyNav>
       <ul>
         <li>
-          <a href="home/#search-section">Search</a>
+          <a (click)="moveToSection('search-section')">Search</a>
         </li>
         <li>
-          <a href="home/#trending-section">Trending</a>
+          <a (click)="moveToSection('trending-section')">Trending</a>
         </li>
         <li>
           <a href="/login">Login</a>

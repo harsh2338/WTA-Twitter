@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sharedService:SharedService) { }
 
   ngOnInit() {
   }
+  moveToSection(id){
+    console.log(id)
+    this.sharedService.scrolltoSection.next(id);
+  }
+  
 
 }

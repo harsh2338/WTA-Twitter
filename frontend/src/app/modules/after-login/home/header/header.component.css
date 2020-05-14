@@ -1,7 +1,4 @@
-  html{
-    scroll-behavior: smooth;
-  }
-  header{
+header{
     background-color: greenyellow;
     padding: 20px 0 ;
 }
@@ -15,8 +12,7 @@ ul li {
       float: left;
       padding: 10px;
       width: 100%;
-      background: #eee;
-      margin-bottom: 20px;
+      background: #000;
   }
   .sticky-nav ul{padding:0px; margin:0px;}
   .sticky-box-shadow {
@@ -29,3 +25,6 @@ ul li {
       margin-right: 20px;
       list-style-type: none;
   }
+  a {
+    cursor: pointer;
+}
