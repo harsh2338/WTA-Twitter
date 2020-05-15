@@ -55,3 +55,40 @@
       text-transform: capitalize;
       color: black;
   }
+  
+  p {
+      text-align: center;
+      font-size: 25px;
+  }
+  
+  a.button2 {
+      display: inline-block;
+      padding: 0.5em 3em;
+      border: 0.16em solid #00829C;
+      margin: 0 0.3em 0.3em 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      color: #00829C;
+      text-align: center;
+      transition: all 0.15s;
+  }
+  
+  a.button2:hover {
+      color: #0047AB;
+      border-color: #0047AB;
+  }
+  
+  a.button2:active {
+      color: #BBBBBB;
+      border-color: #BBBBBB;
+  }
+  
+  @media all and (max-width:30em) {
+      a.button2 {
+          display: block;
+          margin: 0.4em auto;
+      }
+  }
