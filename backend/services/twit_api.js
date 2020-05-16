@@ -13,7 +13,7 @@ const process_tweets = (tweets)=>{
             twt['full_text'] = tweet.retweeted_status.full_text;
         if('extended_tweet' in tweet)
             twt['full_text'] = tweet.extended_tweet.full_text;
-        else twt['full_text'] = tweet.text;
+        if(!twt['full_text']) twt['full_text'] = tweet.text;
         twt['user'] = {};
         for(let um of user_metadata)
             twt['user'][um] = tweet['user'][um];
