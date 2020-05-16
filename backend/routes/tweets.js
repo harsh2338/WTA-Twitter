@@ -20,3 +20,30 @@ router.get("/",async(req,res)=>{
 });
 
 module.exports = router;
+
+// router.post("/login", (req, res, next) => {
+//     User.findOne({email : req.body.email})
+//     .then(user => {
+//         if(!user)
+//             return res.status(401).json({
+//                 message: "Auth failed"
+//             });
+
+//         bcrypt.compare(req.body.password,user.password,(err, result) => {
+//             if(err)
+//                 return res.status(401).json({
+//                     message: "Auth failed"
+//                 });
+//             if(!result)
+//                 return res.status(403).json({
+//                     message: "Auth failed"
+//                 });
+//             const token = jwt.sign({email : user.email, name : user.name}, jwt_key, {expiresIn: "3h"});
+//             return res.status(200).json({
+//                 message: "Auth successful",
+//                 token: token,
+//             });
+//         });
+//     })
+//     .catch(err => res.status(401).json({message : err}));
+// });
