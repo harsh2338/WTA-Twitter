@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedService } from '../shared.service';
+import { MatDialog, MatDialogConfig } from "@angular/material";
+import { SignInComponent } from 'src/app/modules/user/sign-in/sign-in.component';
+import { UserComponent } from 'src/app/modules/user/user.component';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +11,9 @@ import { SharedService } from '../shared.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private sharedService:SharedService) { }
+  constructor(
+    private sharedService:SharedService,
+    private dialog:MatDialog) { }
 
   ngOnInit() {
   }
@@ -16,6 +21,13 @@ export class HeaderComponent implements OnInit {
     console.log(id)
     this.sharedService.scrolltoSection.next(id);
   }
+  // signIn(){
+  //   const dialogConfig = new MatDialogConfig();
+  //   dialogConfig.disableClose = true;
+  //   dialogConfig.autoFocus = true;
+  //   dialogConfig.width = "60%";
+  //   this.dialog.open(UserComponent,dialogConfig);
+  // }
   
 
 }

@@ -14,14 +14,11 @@ const tweets = require("./routes/tweets");
 const auth = require('./routes/auth');
 
 const PORT = 3000
-server.listen(PORT,()=>console.log("listening at", PORT));
+server.listen(PORT, () => console.log("listening at", PORT));
 
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use("/tweets",tweets);
-app.use("/auth",auth);
-app.get("/stream",(req,res)=>{res.sendFile(__dirname + '/public/client.html')});
-
-
-
+app.use("/tweets", tweets);
+app.use("/auth", auth);
+app.get("/stream", (req, res) => { res.sendFile(__dirname + '/public/client.html') });

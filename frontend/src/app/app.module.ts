@@ -21,6 +21,11 @@ import { HeaderComponent } from './modules/after-login/home/header/header.compon
 
 
 import { StickyNavModule } from 'ng2-sticky-nav';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatDialogModule} from '@angular/material/dialog';
+import { LiveComponent } from './modules/after-login/live/live.component';
+
 
 @NgModule({
   declarations: [
@@ -32,13 +37,16 @@ import { StickyNavModule } from 'ng2-sticky-nav';
     HomeComponent,
     SearchComponent,
     HeaderComponent,
+    LiveComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    StickyNavModule
+    StickyNavModule,
+    MatDialogModule,
+    BrowserAnimationsModule
 
   ],
   providers: [{
@@ -46,6 +54,7 @@ import { StickyNavModule } from 'ng2-sticky-nav';
     useClass:AuthInterceptor,
     multi:true
   },AuthGuard,UserService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[UserComponent],
 })
 export class AppModule { }

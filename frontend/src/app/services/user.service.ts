@@ -18,11 +18,11 @@ export class UserService {
 
   constructor(private http:HttpClient) { }
   registerUser(user : User){
-     return this.http.post(environment.apiBaseUrl+'/register',user,this.noAuthHeader)
+     return this.http.post(environment.apiBaseUrl+'/signup',user,this.noAuthHeader)
   }
 
   login(authcreds){
-    return this.http.post(environment.apiBaseUrl+'/authenticate',authcreds,this.noAuthHeader)
+    return this.http.post(environment.apiBaseUrl+'/login',authcreds,this.noAuthHeader)
   }
 
   getUserProfile(){

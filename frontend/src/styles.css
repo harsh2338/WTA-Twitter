@@ -2,11 +2,6 @@
 
 /* BASIC */
 
-html {
-    /* background-color: #56baed; */
-    background-color: white;
-}
-
 body {
     font-family: "Poppins", sans-serif;
     height: 100vh;
@@ -39,6 +34,11 @@ h2 {
     justify-content: center;
     width: 100%;
     padding: 20px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 #formContent {
@@ -432,4 +432,14 @@ td.text-center {
 
 td.text-right {
     text-align: right;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
