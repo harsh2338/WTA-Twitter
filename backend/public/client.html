@@ -20,6 +20,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
     <!-- <script src="/socket.io/socket.io.js"></script> -->
     <script>
+        fetch('http://localhost:3000/tweets/?tag=%23coronavirus&maxTweets=3').then(data => {
+            data.json().then(res => console.log(res))
+        });
         let socket = io('http://localhost:3000/');
         let tot_score = 0,positives = 0,negatives = 0,neutrals = 0,offset = 0.1;
         
