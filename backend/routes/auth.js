@@ -7,7 +7,14 @@ const jwt_key = require("../config/jwt_key")
 
 const router = express.Router();
 
+router.use(function(req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+});
+
 router.post("/signup", (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+
     bcrypt.hash(req.body.password, 10, (err, hash) => {
         if (err)
             return res.status(500).json({ error: err });
