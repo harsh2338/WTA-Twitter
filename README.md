@@ -1,10 +1,10 @@
 # Backend
-cd backend/  
-node index.js
+`cd backend/`  
+`node index.js`  
 
 # Frontend
 
-cd frontend/
+`cd frontend/`  
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
