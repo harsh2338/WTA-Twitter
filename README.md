@@ -2,6 +2,7 @@
 
 # Backend
 `cd backend/`  
+Configure the .env file based on the sample_env file in backend/ dir  
 `node index.js`  
 
 # Frontend
