@@ -46,5 +46,16 @@ export class SignUpComponent implements OnInit {
     form.resetForm();
     this.serverErrorMessages = '';
   }
+  
+  test(){
+    this.userService.GetPost().then((response)=>{
+      console.log(response)
+      // response.json.then((data)=>{
+      //   console.log(data)
+      // })
+    }).catch((err)=>{
+      console.log(err)
+    });
+  }
 
 }

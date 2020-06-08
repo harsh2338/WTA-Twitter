@@ -1,0 +1,844 @@
+this.JsonSentiment = [
+    {
+      "created_at": "Sun May 17 05:16:15 +0000 2020",
+      "id": 1261888239314624500,
+      "full_text": "#Corona\nBreaking: 10 new COVID-19 cases confirmed in Nepal by MoHP. All of them are from Rautahat. Now, total number of COVID-19 confirmed cases in Nepal reached to 291.\n\nSource: MoHP- Nepal",
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "retweet_count": 11,
+      "favorite_count": 0,
+      "user": {
+        "id": 1257169252014084000,
+        "name": "Kumar Dass",
+        "screen_name": "KumarDass11",
+        "location": "Nepal",
+        "profile_background_color": "F5F8FA",
+        "profile_background_image_url": null,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1257491954503421953/JCvRbUTE_normal.jpg"
+      },
+      "score": {
+        "score": 1,
+        "comparative": 0.03125,
+        "calculation": [
+          {
+            "reached": 1
+          }
+        ],
+        "tokens": [
+          "corona",
+          "breaking",
+          "10",
+          "new",
+          "covid-19",
+          "cases",
+          "confirmed",
+          "in",
+          "nepal",
+          "by",
+          "mohp",
+          "all",
+          "of",
+          "them",
+          "are",
+          "from",
+          "rautahat",
+          "now",
+          "total",
+          "number",
+          "of",
+          "covid-19",
+          "confirmed",
+          "cases",
+          "in",
+          "nepal",
+          "reached",
+          "to",
+          "291",
+          "source",
+          "mohp-",
+          "nepal"
+        ],
+        "words": [
+          "reached"
+        ],
+        "positive": [
+          "reached"
+        ],
+        "negative": []
+      }
+    },
+    {
+      "created_at": "Sun May 17 05:16:13 +0000 2020",
+      "id": 1261888231051628500,
+      "full_text": "While the Belgian Prime Minister @Sophie_Wilmes was visiting a hospital in Brussels today, hospital staff turned their backs to her car. Belgium has the highest per capita Covid death toll.  The government failed completely. #FailedState 🇧🇪 #corona #COVIDー19 https://t.co/98x3OJFM4F",
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "retweet_count": 903,
+      "favorite_count": 0,
+      "user": {
+        "id": 451209287,
+        "name": "Jorge Soria",
+        "screen_name": "jsoriav",
+        "location": "",
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/824678318322487296/YtFQdEKU_normal.jpg"
+      },
+      "score": {
+        "score": -3,
+        "comparative": -0.075,
+        "calculation": [
+          {
+            "failed": -2
+          },
+          {
+            "death": -2
+          },
+          {
+            "backs": 1
+          }
+        ],
+        "tokens": [
+          "while",
+          "belgian",
+          "prime",
+          "minister",
+          "@sophie",
+          "wilmes",
+          "was",
+          "visiting",
+          "hospital",
+          "in",
+          "brussels",
+          "today",
+          "hospital",
+          "staff",
+          "turned",
+          "their",
+          "backs",
+          "to",
+          "her",
+          "car",
+          "belgium",
+          "has",
+          "highest",
+          "per",
+          "capita",
+          "covid",
+          "death",
+          "toll",
+          "the",
+          "government",
+          "failed",
+          "completely",
+          "failedstate",
+          "🇧🇪",
+          "corona",
+          "covidー19",
+          "https",
+          "t",
+          "co",
+          "98x3ojfm4f"
+        ],
+        "words": [
+          "failed",
+          "death",
+          "backs"
+        ],
+        "positive": [
+          "backs"
+        ],
+        "negative": [
+          "failed",
+          "death"
+        ]
+      }
+    },
+    {
+      "created_at": "Sun May 17 05:16:02 +0000 2020",
+      "id": 1261888182959984600,
+      "full_text": "While the Belgian Prime Minister @Sophie_Wilmes was visiting a hospital in Brussels today, hospital staff turned their backs to her car. Belgium has the highest per capita Covid death toll.  The government failed completely. #FailedState 🇧🇪 #corona #COVIDー19 https://t.co/98x3OJFM4F",
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "retweet_count": 903,
+      "favorite_count": 0,
+      "user": {
+        "id": 932692167671283700,
+        "name": "Colro",
+        "screen_name": "ColroColr",
+        "location": "",
+        "profile_background_color": "F5F8FA",
+        "profile_background_image_url": null,
+        "profile_image_url": "http://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png"
+      },
+      "score": {
+        "score": -3,
+        "comparative": -0.075,
+        "calculation": [
+          {
+            "failed": -2
+          },
+          {
+            "death": -2
+          },
+          {
+            "backs": 1
+          }
+        ],
+        "tokens": [
+          "while",
+          "belgian",
+          "prime",
+          "minister",
+          "@sophie",
+          "wilmes",
+          "was",
+          "visiting",
+          "hospital",
+          "in",
+          "brussels",
+          "today",
+          "hospital",
+          "staff",
+          "turned",
+          "their",
+          "backs",
+          "to",
+          "her",
+          "car",
+          "belgium",
+          "has",
+          "highest",
+          "per",
+          "capita",
+          "covid",
+          "death",
+          "toll",
+          "the",
+          "government",
+          "failed",
+          "completely",
+          "failedstate",
+          "🇧🇪",
+          "corona",
+          "covidー19",
+          "https",
+          "t",
+          "co",
+          "98x3ojfm4f"
+        ],
+        "words": [
+          "failed",
+          "death",
+          "backs"
+        ],
+        "positive": [
+          "backs"
+        ],
+        "negative": [
+          "failed",
+          "death"
+        ]
+      }
+    },
+    {
+      "created_at": "Sun May 17 05:15:58 +0000 2020",
+      "id": 1261888168313249800,
+      "full_text": "While the Belgian Prime Minister @Sophie_Wilmes was visiting a hospital in Brussels today, hospital staff turned their backs to her car. Belgium has the highest per capita Covid death toll.  The government failed completely. #FailedState 🇧🇪 #corona #COVIDー19 https://t.co/98x3OJFM4F",
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "retweet_count": 903,
+      "favorite_count": 0,
+      "user": {
+        "id": 161879896,
+        "name": "tara 🌎🚀🇺🇲🇺🇲🇺🇲👽",
+        "screen_name": "tphipps6",
+        "location": "Held hostage in CA",
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1256797650789076992/f4J3c8FA_normal.jpg"
+      },
+      "score": {
+        "score": -3,
+        "comparative": -0.075,
+        "calculation": [
+          {
+            "failed": -2
+          },
+          {
+            "death": -2
+          },
+          {
+            "backs": 1
+          }
+        ],
+        "tokens": [
+          "while",
+          "belgian",
+          "prime",
+          "minister",
+          "@sophie",
+          "wilmes",
+          "was",
+          "visiting",
+          "hospital",
+          "in",
+          "brussels",
+          "today",
+          "hospital",
+          "staff",
+          "turned",
+          "their",
+          "backs",
+          "to",
+          "her",
+          "car",
+          "belgium",
+          "has",
+          "highest",
+          "per",
+          "capita",
+          "covid",
+          "death",
+          "toll",
+          "the",
+          "government",
+          "failed",
+          "completely",
+          "failedstate",
+          "🇧🇪",
+          "corona",
+          "covidー19",
+          "https",
+          "t",
+          "co",
+          "98x3ojfm4f"
+        ],
+        "words": [
+          "failed",
+          "death",
+          "backs"
+        ],
+        "positive": [
+          "backs"
+        ],
+        "negative": [
+          "failed",
+          "death"
+        ]
+      }
+    },
+    {
+      "created_at": "Sun May 17 05:15:52 +0000 2020",
+      "id": 1261888141570400300,
+      "full_text": "4,987 new #Corona cases in the last 24 hour. This is the highest jump in a single day. 2,872 people are dead so far. The overall figure inching towards 1 Lakh. #IndiaFightsCoronavirus https://t.co/NeyFf0a1Ng",
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "user": {
+        "id": 140856465,
+        "name": "Tapas Bhattacharya",
+        "screen_name": "tapascancer",
+        "location": "Delhi",
+        "profile_background_color": "8B542B",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme8/bg.gif",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/675919827265949696/09kEU_Wm_normal.jpg"
+      },
+      "score": {
+        "score": -3,
+        "comparative": -0.08823529411764706,
+        "calculation": [
+          {
+            "dead": -3
+          }
+        ],
+        "tokens": [
+          "4",
+          "987",
+          "new",
+          "corona",
+          "cases",
+          "in",
+          "last",
+          "24",
+          "hour",
+          "this",
+          "is",
+          "highest",
+          "jump",
+          "in",
+          "single",
+          "day",
+          "2",
+          "872",
+          "people",
+          "are",
+          "dead",
+          "far",
+          "the",
+          "overall",
+          "figure",
+          "inching",
+          "towards",
+          "1",
+          "lakh",
+          "indiafightscoronavirus",
+          "https",
+          "t",
+          "co",
+          "neyff0a1ng"
+        ],
+        "words": [
+          "dead"
+        ],
+        "positive": [],
+        "negative": [
+          "dead"
+        ]
+      }
+    },
+    {
+      "created_at": "Sun May 17 05:15:47 +0000 2020",
+      "id": 1261888119563063300,
+      "full_text": "While the Belgian Prime Minister @Sophie_Wilmes was visiting a hospital in Brussels today, hospital staff turned their backs to her car. Belgium has the highest per capita Covid death toll.  The government failed completely. #FailedState 🇧🇪 #corona #COVIDー19 https://t.co/98x3OJFM4F",
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "retweet_count": 903,
+      "favorite_count": 0,
+      "user": {
+        "id": 179211785,
+        "name": "Leticia Reynoso",
+        "screen_name": "LeticiaReynoso",
+        "location": "Guadalajara, Jalisco",
+        "profile_background_color": "FF6699",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme11/bg.gif",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1255630509335556098/zvDSjluJ_normal.jpg"
+      },
+      "score": {
+        "score": -3,
+        "comparative": -0.075,
+        "calculation": [
+          {
+            "failed": -2
+          },
+          {
+            "death": -2
+          },
+          {
+            "backs": 1
+          }
+        ],
+        "tokens": [
+          "while",
+          "belgian",
+          "prime",
+          "minister",
+          "@sophie",
+          "wilmes",
+          "was",
+          "visiting",
+          "hospital",
+          "in",
+          "brussels",
+          "today",
+          "hospital",
+          "staff",
+          "turned",
+          "their",
+          "backs",
+          "to",
+          "her",
+          "car",
+          "belgium",
+          "has",
+          "highest",
+          "per",
+          "capita",
+          "covid",
+          "death",
+          "toll",
+          "the",
+          "government",
+          "failed",
+          "completely",
+          "failedstate",
+          "🇧🇪",
+          "corona",
+          "covidー19",
+          "https",
+          "t",
+          "co",
+          "98x3ojfm4f"
+        ],
+        "words": [
+          "failed",
+          "death",
+          "backs"
+        ],
+        "positive": [
+          "backs"
+        ],
+        "negative": [
+          "failed",
+          "death"
+        ]
+      }
+    },
+    {
+      "created_at": "Sun May 17 05:15:47 +0000 2020",
+      "id": 1261888119445438500,
+      "full_text": "An employee of a company, where he worked for a few years, was asked to resign and leave last evening citing financial strain. He left lamenting: \"My recruitment process lasted a month but I was sacked in a matter of minutes!\"\n\n#Corona",
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "retweet_count": 8,
+      "favorite_count": 0,
+      "user": {
+        "id": 189033006,
+        "name": "முருகானந்தம் #StayHome",
+        "screen_name": "muruganandham_k",
+        "location": "Pondicherry, India",
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1258493204640395264/IgZ7qN8d_normal.jpg"
+      },
+      "score": {
+        "score": -1,
+        "comparative": -0.02631578947368421,
+        "calculation": [
+          {
+            "matter": 1
+          },
+          {
+            "leave": -1
+          },
+          {
+            "resign": -1
+          }
+        ],
+        "tokens": [
+          "an",
+          "employee",
+          "of",
+          "company",
+          "where",
+          "he",
+          "worked",
+          "for",
+          "few",
+          "years",
+          "was",
+          "asked",
+          "to",
+          "resign",
+          "and",
+          "leave",
+          "last",
+          "evening",
+          "citing",
+          "financial",
+          "strain",
+          "he",
+          "left",
+          "lamenting",
+          "my",
+          "recruitment",
+          "process",
+          "lasted",
+          "month",
+          "but",
+          "i",
+          "was",
+          "sacked",
+          "in",
+          "matter",
+          "of",
+          "minutes",
+          "corona"
+        ],
+        "words": [
+          "matter",
+          "leave",
+          "resign"
+        ],
+        "positive": [
+          "matter"
+        ],
+        "negative": [
+          "leave",
+          "resign"
+        ]
+      }
+    },
+    {
+      "created_at": "Sun May 17 05:15:46 +0000 2020",
+      "id": 1261888117952348200,
+      "full_text": "While the Belgian Prime Minister @Sophie_Wilmes was visiting a hospital in Brussels today, hospital staff turned their backs to her car. Belgium has the highest per capita Covid death toll.  The government failed completely. #FailedState 🇧🇪 #corona #COVIDー19 https://t.co/98x3OJFM4F",
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "retweet_count": 903,
+      "favorite_count": 0,
+      "user": {
+        "id": 1193985620495995000,
+        "name": "LuisEsqueda1",
+        "screen_name": "LuisEsq87320137",
+        "location": "",
+        "profile_background_color": "F5F8FA",
+        "profile_background_image_url": null,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1240533134745186304/fPc6NLKJ_normal.jpg"
+      },
+      "score": {
+        "score": -3,
+        "comparative": -0.075,
+        "calculation": [
+          {
+            "failed": -2
+          },
+          {
+            "death": -2
+          },
+          {
+            "backs": 1
+          }
+        ],
+        "tokens": [
+          "while",
+          "belgian",
+          "prime",
+          "minister",
+          "@sophie",
+          "wilmes",
+          "was",
+          "visiting",
+          "hospital",
+          "in",
+          "brussels",
+          "today",
+          "hospital",
+          "staff",
+          "turned",
+          "their",
+          "backs",
+          "to",
+          "her",
+          "car",
+          "belgium",
+          "has",
+          "highest",
+          "per",
+          "capita",
+          "covid",
+          "death",
+          "toll",
+          "the",
+          "government",
+          "failed",
+          "completely",
+          "failedstate",
+          "🇧🇪",
+          "corona",
+          "covidー19",
+          "https",
+          "t",
+          "co",
+          "98x3ojfm4f"
+        ],
+        "words": [
+          "failed",
+          "death",
+          "backs"
+        ],
+        "positive": [
+          "backs"
+        ],
+        "negative": [
+          "failed",
+          "death"
+        ]
+      }
+    },
+    {
+      "created_at": "Sun May 17 05:15:45 +0000 2020",
+      "id": 1261888114735317000,
+      "full_text": "While the Belgian Prime Minister @Sophie_Wilmes was visiting a hospital in Brussels today, hospital staff turned their backs to her car. Belgium has the highest per capita Covid death toll.  The government failed completely. #FailedState 🇧🇪 #corona #COVIDー19 https://t.co/98x3OJFM4F",
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "retweet_count": 903,
+      "favorite_count": 0,
+      "user": {
+        "id": 120004865,
+        "name": "Mich Torres",
+        "screen_name": "000Mich",
+        "location": "",
+        "profile_background_color": "FFF04D",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme5/bg.gif",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/925612570949685248/ispsE3RU_normal.jpg"
+      },
+      "score": {
+        "score": -3,
+        "comparative": -0.075,
+        "calculation": [
+          {
+            "failed": -2
+          },
+          {
+            "death": -2
+          },
+          {
+            "backs": 1
+          }
+        ],
+        "tokens": [
+          "while",
+          "belgian",
+          "prime",
+          "minister",
+          "@sophie",
+          "wilmes",
+          "was",
+          "visiting",
+          "hospital",
+          "in",
+          "brussels",
+          "today",
+          "hospital",
+          "staff",
+          "turned",
+          "their",
+          "backs",
+          "to",
+          "her",
+          "car",
+          "belgium",
+          "has",
+          "highest",
+          "per",
+          "capita",
+          "covid",
+          "death",
+          "toll",
+          "the",
+          "government",
+          "failed",
+          "completely",
+          "failedstate",
+          "🇧🇪",
+          "corona",
+          "covidー19",
+          "https",
+          "t",
+          "co",
+          "98x3ojfm4f"
+        ],
+        "words": [
+          "failed",
+          "death",
+          "backs"
+        ],
+        "positive": [
+          "backs"
+        ],
+        "negative": [
+          "failed",
+          "death"
+        ]
+      }
+    },
+    {
+      "created_at": "Sun May 17 05:15:39 +0000 2020",
+      "id": 1261888087149482000,
+      "full_text": "While the Belgian Prime Minister @Sophie_Wilmes was visiting a hospital in Brussels today, hospital staff turned their backs to her car. Belgium has the highest per capita Covid death toll.  The government failed completely. #FailedState 🇧🇪 #corona #COVIDー19 https://t.co/98x3OJFM4F",
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "retweet_count": 903,
+      "favorite_count": 0,
+      "user": {
+        "id": 356258924,
+        "name": "Ali Deniz Kaygan",
+        "screen_name": "adkaygan",
+        "location": "Ankara",
+        "profile_background_color": "ACDED6",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme8/bg.gif",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/733221584614260736/Ez8J_u6S_normal.jpg"
+      },
+      "score": {
+        "score": -3,
+        "comparative": -0.075,
+        "calculation": [
+          {
+            "failed": -2
+          },
+          {
+            "death": -2
+          },
+          {
+            "backs": 1
+          }
+        ],
+        "tokens": [
+          "while",
+          "belgian",
+          "prime",
+          "minister",
+          "@sophie",
+          "wilmes",
+          "was",
+          "visiting",
+          "hospital",
+          "in",
+          "brussels",
+          "today",
+          "hospital",
+          "staff",
+          "turned",
+          "their",
+          "backs",
+          "to",
+          "her",
+          "car",
+          "belgium",
+          "has",
+          "highest",
+          "per",
+          "capita",
+          "covid",
+          "death",
+          "toll",
+          "the",
+          "government",
+          "failed",
+          "completely",
+          "failedstate",
+          "🇧🇪",
+          "corona",
+          "covidー19",
+          "https",
+          "t",
+          "co",
+          "98x3ojfm4f"
+        ],
+        "words": [
+          "failed",
+          "death",
+          "backs"
+        ],
+        "positive": [
+          "backs"
+        ],
+        "negative": [
+          "failed",
+          "death"
+        ]
+      }
+    }
+  ]

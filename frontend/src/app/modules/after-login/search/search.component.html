@@ -1,0 +1,129 @@
+<div style="width: 100%;height: 100%;">
+    <img src="../../../assets/img/bird.png" class="fadeInDown">
+
+    <div style="align-items: center;">
+        <h1>Twitter Sentiment Analysis</h1>
+        <p style="font-size: large;text-align: center;">Search for a hashtag and set the maximum tweets to be considered for the analysis</p>
+    </div>
+
+    <div class="main" id="search-section">
+        <div id="cover">
+            <form method="get" action="">
+                <div class="tb">
+                    <div class="td">
+                        <input type="text" placeholder="#hashtag" #searchtext style="color: black;" required>
+                    </div>
+                    <div class="td" id="s-cover">
+                        <button (click)="searchText(searchtext)" type="submit">
+            <div id="s-circle"></div>
+            <span></span>
+          </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+        <!-- <div class="dropdown-container" style="float: right;">
+            <label for="openDropdown" class="dropdown">
+          Dropdown
+          <i class="fas fa-angle-down"></i>
+        </label>
+
+            <input type="checkbox" id="openDropdown" hidden>
+
+            <div class="dropdown-menu">
+                <span>Item 1</span>
+                <span>Item 2</span>
+                <span>Item 3</span>
+                <span>Item 4</span>
+            </div>
+        </div> -->
+    </div>
+</div>
+
+
+<!-- header {
+    background-color: greenyellow;
+    padding: 20px 0;
+}
+
+ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.sticky-nav {
+    width: 98%;
+    float: left;
+    padding: 10px;
+    width: 100%;
+    background: #000;
+}
+
+.sticky-nav ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+.sticky-box-shadow {
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    background: #000!important;
+    color: #fff;
+}
+
+.sticky-nav ul li {
+    float: left;
+    margin-right: 20px;
+    list-style-type: none;
+}
+
+a {
+    cursor: pointer;
+} -->
+
+
+
+
+
+
+
+
+<div class="main" id="chart-section">
+    <div class="column left">
+        <h2>Sentiment Score</h2>
+        <div id="divChart">
+            <canvas id="sentimentChart">
+            </canvas>
+        </div>
+    </div>
+    <div class="column right">
+        <h2>Number of Sentiments</h2>
+        <div id="divBar">
+            <canvas id="noChart">
+            </canvas>
+        </div>
+    </div>
+</div>
+
+<div class="main" id="table-section" style="padding:100px">
+    <table>
+        <caption>Tabular Analysis</caption>
+        <thead>
+            <tr>
+                <th scope="col" style="max-width: 150px;">Score</th>
+                <th scope="col" style="max-width: 150px;">Comparative</th>
+                <th scope="col">Tweet</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of JsonSentiment ">
+                <td data-label="Score" style="max-width: 150px;">{{data.score.score}}</td>
+                <td data-label="Comparative" style="max-width: 150px;">{{data.score.comparative}}</td>
+                <td data-label="Tweet">{{data.full_text}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
