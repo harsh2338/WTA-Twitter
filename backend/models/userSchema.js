@@ -38,7 +38,8 @@ const userSchema = mongo.Schema({
     created_at : {
         type :Date,
         default : Date.now()
-    }
+    },
+    recent : [String],
 })
 
 module.exports = mongo.model('User',userSchema);
