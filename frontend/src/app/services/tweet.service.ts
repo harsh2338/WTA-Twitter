@@ -15,17 +15,13 @@ export class TweetService {
       headers.append('Accept', 'application/json');
       const request = new Request(URL, { method: 'GET', cache: 'reload', headers: headers });
       try {
-
         const fetchResult = fetch(request);
         const response = await fetchResult;
         const jsonData = await response.json();
-        console.log(response);
-        console.log(jsonData);
         return jsonData
       } catch(e){
         console.log(e)
         throw Error(e);
-
       }
     
   }

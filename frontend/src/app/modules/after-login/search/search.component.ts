@@ -10,71 +10,73 @@ import { from, bindCallback } from 'rxjs';
 })
 export class SearchComponent implements OnInit {
 
-  JsonSentiment=[{'score':{'score':1,'comparative':2},'full_text':"fsege"}];
-   chartArea
-   TableArea
+  JsonSentiment;
+  chartArea
+  TableArea
   constructor(private tweetService: TweetService) { }
 
   ngOnInit() {
 
-    this.chartArea=document.getElementById('chart-section')
-    this.TableArea=document.getElementById('table-section')
+    this.chartArea = document.getElementById('chart-section')
+    this.TableArea = document.getElementById('table-section')
 
-    this.chartArea.style.display='none'
-    this.TableArea.style.display='none'
+    this.chartArea.style.display = 'none'
+    this.TableArea.style.display = 'none'
   }
-  searchText(searchValue){
-    var sv=searchValue.value;
+  searchText(searchValue) {
+    var sv = searchValue.value;
     this.getSentimentAnalysis(sv)
-
   }
 
 
   async getSentimentAnalysis(sv) {
     console.log(sv);
-    var jsonResponse=await this.tweetService.getSentimentData(sv);
+    var jsonResponse = await this.tweetService.getSentimentData(sv);
     // this.JsonSentiment = Array.of(jsonResponse);
-    this.JsonSentiment=jsonResponse
+    this.JsonSentiment = jsonResponse
     console.log(this.JsonSentiment);
-    var negScore=0,nneg=0;
-    var posScore=0,npos=0;
-    var nuetralScore=0;
-    for(var i=0;i<this.JsonSentiment.length;i++){
-        var data=this.JsonSentiment[i];
-        if(data.score.score<0){
-          negScore+=(data.score.score)*-1;
-          nneg++;
-          console.log(data.score.score)
-        }
-        else if(data.score.score>0){
-          posScore+=(data.score.score);
-          npos++;
-          console.log(data.score.score)
-        }
-        else nuetralScore++;
+    var negScore = 0, nneg = 0;
+    var posScore = 0, npos = 0;
+    var nuetralScore = 0;
+    for (var i = 0; i < this.JsonSentiment.length; i++) {
+      var data = this.JsonSentiment[i];
+      if (data.score.score < 0) {
+        negScore += (data.score.score) * -1;
+        nneg++;
+        console.log(data.score.score)
+      }
+      else if (data.score.score > 0) {
+        posScore += (data.score.score);
+        npos++;
+        console.log(data.score.score)
+      }
+      else nuetralScore++;
     }
-    this.setBarChart([nneg,nuetralScore,npos]);
-    this.setPieChart([negScore,nuetralScore,posScore]);
+    this.setBarChart([nneg, nuetralScore, npos]);
+    this.setPieChart([negScore, nuetralScore, posScore]);
 
-    this.chartArea.style.display='block'
-    this.TableArea.style.display='block'
+    this.chartArea.style.display = 'block'
+    this.TableArea.style.display = 'block'
 
     this.scrollToElement('chart-section')
 
   }
+
   scrollToElement(id): void {
     console.log("Scrolling")
-    var ele=document.getElementById(id);
-    ele.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    var ele = document.getElementById(id);
+    console.log(ele)
+    ele.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+    console.log("Done")
   }
 
-  setPieChart(datavalues){
+  setPieChart(datavalues) {
     var pie = new Chart("sentimentChart", {
       type: 'pie',
       data: {
-        labels: ['Negative', 'Neutral',  'Positive'],
+        labels: ['Negative', 'Neutral', 'Positive'],
         datasets: [{
-          label: '', 
+          label: '',
           data: datavalues,
           backgroundColor: [
             '#FF4949',
@@ -94,14 +96,14 @@ export class SearchComponent implements OnInit {
       }
     });
   }
-  setBarChart(datavalues){
+  setBarChart(datavalues) {
     var bar = new Chart("noChart", {
       type: 'bar',
       data: {
-        labels: ['Negative', 'Neutral',  'Positive'],
+        labels: ['Negative', 'Neutral', 'Positive'],
         datasets: [{
           label: 'Number of tweets',
-          barThickness: 30, 
+          barThickness: 30,
           data: datavalues,
           backgroundColor: [
             '#FF4949',
@@ -117,7 +119,52 @@ export class SearchComponent implements OnInit {
         }]
       },
       options: {
+        responsive: false,
+        scales: {
+        
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
       }
     });
   }
-  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 10: WTA STATUS
+// 11,12: DBS PROJECT FINAL
+// 12: OS PROJECT FINAL 
+// 13: ACD EXAM
+// 16: DBS EXAM
+// 17: WTA angular assignment b4 530
+// 18: DSA EXAM
+// 19: DSA PROJECT
+// 20: WTA WRITTEN B4 530 ,WTA PROJECT
+

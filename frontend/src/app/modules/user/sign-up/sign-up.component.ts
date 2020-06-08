@@ -32,14 +32,14 @@ export class SignUpComponent implements OnInit {
           this.serverErrorMessages = err.error.join('<br/>');
         }
         else
-          this.serverErrorMessages = 'Something went wrong.Please contact admin.';
+          this.serverErrorMessages = 'Something went wrong.';
       }
     );
   }
 
   resetForm(form: NgForm) {
     this.userService.selectedUser = {
-      username: '',
+      name: '',
       email: '',
       password: ''
     };
@@ -47,15 +47,12 @@ export class SignUpComponent implements OnInit {
     this.serverErrorMessages = '';
   }
   
-  test(){
-    this.userService.GetPost().then((response)=>{
-      console.log(response)
-      // response.json.then((data)=>{
-      //   console.log(data)
-      // })
-    }).catch((err)=>{
-      console.log(err)
-    });
-  }
+  // test(){
+  //   this.userService.GetPost().then((response)=>{
+  //     console.log(response)
+  //   }).catch((err)=>{
+  //     console.log(err)
+  //   });
+  // }
 
 }

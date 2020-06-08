@@ -7,12 +7,20 @@
             <li>
                 <a (click)="moveToSection('live-section')">Live Tweets</a>
             </li>
-            <li>
-                <a href="/login">Login</a>
-            </li>
-            <li>
-                <a href="/signup">Sign Up</a>
-            </li>
+            <ng-container *ngIf="isLoggedIn(); else elseTemplate">
+                <li>
+                    <a (click)="onLogin()">Login</a>
+                </li>
+                <li>
+                    <a (click)="onSignup()">Sign Up</a>
+                </li>
+            </ng-container>
+            <ng-template #elseTemplate>
+                <li>
+                    <a (click)="onLogout()">Log Out</a>
+                </li>
+            </ng-template>
+
         </ul>
     </nav>
 </div>

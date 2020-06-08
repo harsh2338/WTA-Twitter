@@ -3,6 +3,8 @@ import { SharedService } from '../shared.service';
 import { MatDialog, MatDialogConfig } from "@angular/material";
 import { SignInComponent } from 'src/app/modules/user/sign-in/sign-in.component';
 import { UserComponent } from 'src/app/modules/user/user.component';
+import { UserService } from '../../../../services/user.service';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -12,22 +14,31 @@ import { UserComponent } from 'src/app/modules/user/user.component';
 export class HeaderComponent implements OnInit {
 
   constructor(
-    private sharedService:SharedService,
-    private dialog:MatDialog) { }
+    private sharedService: SharedService,
+    private dialog: MatDialog,
+    private userService: UserService,
+    private router : Router
+    ) { }
 
   ngOnInit() {
   }
-  moveToSection(id){
+  moveToSection(id) {
     console.log(id)
     this.sharedService.scrolltoSection.next(id);
   }
-  // signIn(){
-  //   const dialogConfig = new MatDialogConfig();
-  //   dialogConfig.disableClose = true;
-  //   dialogConfig.autoFocus = true;
-  //   dialogConfig.width = "60%";
-  //   this.dialog.open(UserComponent,dialogConfig);
-  // }
-  
+  onLogout(){
+    this.userService.deleteToken();
+    this.router.navigate(['/login'])
+  }
+  onLogin(){
+    this.router.navigate(['/login'])
+  }
+  onSignup(){
+    this.router.navigate(['/signup'])
+  }
+  isLoggedIn(){
+    return ! this.userService.isLoggedIn()
+  }
+
 
 }
