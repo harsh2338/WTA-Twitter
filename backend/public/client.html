@@ -6,7 +6,16 @@
     <title>Sockets Client</title>
 </head>
 
-
+<!-- socket.on('tweets',(data)=>{
+            tot_score += data.tweet.score.comparative;
+            if(data.tweet.score.comparative > offset)positives++;
+            else if(data.tweet.score.comparative < 0)negatives++;
+            else neutrals++;
+            let score = document.getElementById('score');
+            score.innerHTML = `TOTAL : ${tot_score.toFixed(2)} POSITIVES : ${positives} NEUTRALS : ${neutrals} NEGATIVES : ${negatives}`;
+            let tweets = document.getElementById('tweets')
+            tweets.innerHTML = data.tweet.full_text + "</br>" + "SCORE : " + data.tweet.score.score + "</br></br>" + tweets.innerHTML;
+        }); -->
 
 <body>
     <h1>Sockets</h1>
