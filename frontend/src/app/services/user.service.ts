@@ -46,6 +46,9 @@ export class UserService {
   setToken(token: string) {
     localStorage.setItem('token', token)
   }
+  setUser(user){
+    localStorage.setItem('user',user)
+  }
 
   deleteToken() {
     localStorage.removeItem('token')
