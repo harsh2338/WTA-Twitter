@@ -8,9 +8,9 @@ export class TweetService {
 
   constructor() { }
 
-  async getSentimentData(sv){
+  async getSentimentData(sv,maxTweets){
     
-      const URL =environment.apiBaseUrl+'/tweets?tag=%23'+sv+'&maxTweets=10';
+      const URL =environment.apiBaseUrl+'/tweets?tag=%23'+sv+'&maxTweets='+maxTweets;
       const headers = new Headers();
       headers.append('Accept', 'application/json');
       const request = new Request(URL, { method: 'GET', cache: 'reload', headers: headers });

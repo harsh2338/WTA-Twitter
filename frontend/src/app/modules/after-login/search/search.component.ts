@@ -10,6 +10,7 @@ import { from, bindCallback } from 'rxjs';
 })
 export class SearchComponent implements OnInit {
 
+  maxTweets=200;
   JsonSentiment;
   chartArea
   TableArea
@@ -19,7 +20,6 @@ export class SearchComponent implements OnInit {
 
     this.chartArea = document.getElementById('chart-section')
     this.TableArea = document.getElementById('table-section')
-
     this.chartArea.style.display = 'none'
     this.TableArea.style.display = 'none'
   }
@@ -31,7 +31,7 @@ export class SearchComponent implements OnInit {
 
   async getSentimentAnalysis(sv) {
     console.log(sv);
-    var jsonResponse = await this.tweetService.getSentimentData(sv);
+    var jsonResponse = await this.tweetService.getSentimentData(sv,this.maxTweets);
     // this.JsonSentiment = Array.of(jsonResponse);
     this.JsonSentiment = jsonResponse
     console.log(this.JsonSentiment);
@@ -121,50 +121,32 @@ export class SearchComponent implements OnInit {
       options: {
         responsive: false,
         scales: {
-        
+          xAxes: [{
+            gridLines: {
+              display:false
+            }
+        }],
           yAxes: [{
             ticks: {
               beginAtZero: true
+            },
+            gridLines: {
+              display:true
             }
           }]
         }
       }
     });
   }
+
+  togglePopup(){
+    document.getElementById("popup-1").classList.toggle("active");
+  }
+  setMaxTweets(max){
+    this.maxTweets=max
+    document.getElementById("popup-1").classList.toggle("active");
+  }
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// 10: WTA STATUS
-// 11,12: DBS PROJECT FINAL
-// 12: OS PROJECT FINAL 
-// 13: ACD EXAM
-// 16: DBS EXAM
-// 17: WTA angular assignment b4 530
-// 18: DSA EXAM
-// 19: DSA PROJECT
-// 20: WTA WRITTEN B4 530 ,WTA PROJECT
 
