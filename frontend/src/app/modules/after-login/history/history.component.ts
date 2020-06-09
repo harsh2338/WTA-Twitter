@@ -8,11 +8,11 @@ import {UserService} from '../../../services/user.service'
 export class HistoryComponent implements OnInit {
 
   constructor(private userService:UserService) { }
-
+  history=[]
   ngOnInit() {
-    console.log("History")
     this.userService.getHistory().subscribe((data)=>{
-      console.log(data)
+      this.history=data['user']['recent']
+      console.log(this.history)
     })
     
   }
