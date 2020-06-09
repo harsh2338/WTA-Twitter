@@ -30,18 +30,19 @@ export class LiveComponent implements OnInit {
 
 
     this.totScore += data.tweet.score.comparative;
+    this.totScore.toFixed(3)
     if (data.tweet.score.comparative > this.offset) 
       this.positives++;
     else if (data.tweet.score.comparative < 0) 
       this.negatives++;
     else 
       this.neutrals++;
-
-    this.output.push(data);
+    console.log(data)
+    this.output.unshift(data);
   }
 
   
-  sendTag(): void {
+  setStream(): void {
     this.webSocketService.emit('setStream', this.hashTag);
     this.totScore = 0;
     this.positives = 0;
@@ -49,4 +50,12 @@ export class LiveComponent implements OnInit {
     this.neutrals = 0;
   }
 
+  disconnect(){
+    this.webSocketService.socket.disconnect();
+  }
+  reconnect() {
+    this.webSocketService.socket.connect();
+    this.setStream();
+}
+  
 }
