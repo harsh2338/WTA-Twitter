@@ -9,6 +9,7 @@ const cors = require("cors");
 
 const tweets = require("./routes/tweets");
 const auth = require('./routes/auth');
+const users =require('./routes/users');
 
 const PORT = 3000
 const server = app.listen(PORT, () => console.log("listening at", PORT));
@@ -21,6 +22,7 @@ app.use(cors());
 
 app.use("/tweets",tweets);
 app.use("/auth",auth);
+app.use("/users",users);
 app.get("/stream",(req,res)=>{res.sendFile(__dirname + '/public/client.html')});
 
 
