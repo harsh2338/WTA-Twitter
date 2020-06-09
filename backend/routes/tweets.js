@@ -15,7 +15,7 @@ router.get("/",check_auth, async(req,res)=>{
         tweets = await twit_api.get_tweets(req.query.tag, req.query.maxTweets);
     }
     await sent_api.tweets_analyzer(tweets);
-    User.updateOne({_id : req.user.id}, {$push : {recent : req.query.tag}})
+    User.updateOne({_id : req.user.id}, {$push : {recent : req.query.tag}}).then(user=>{});
     return res.json(tweets);
 });
 
