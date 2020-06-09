@@ -10,7 +10,7 @@ import { from, bindCallback } from 'rxjs';
 })
 export class SearchComponent implements OnInit {
 
-  maxTweets=200;
+  maxTweets = 200;
   JsonSentiment;
   chartArea
   TableArea
@@ -31,34 +31,39 @@ export class SearchComponent implements OnInit {
 
   async getSentimentAnalysis(sv) {
     console.log(sv);
-    var jsonResponse = await this.tweetService.getSentimentData(sv,this.maxTweets);
-    // this.JsonSentiment = Array.of(jsonResponse);
-    this.JsonSentiment = jsonResponse
-    console.log(this.JsonSentiment);
-    var negScore = 0, nneg = 0;
-    var posScore = 0, npos = 0;
-    var nuetralScore = 0;
-    for (var i = 0; i < this.JsonSentiment.length; i++) {
-      var data = this.JsonSentiment[i];
-      if (data.score.score < 0) {
-        negScore += (data.score.score) * -1;
-        nneg++;
-        console.log(data.score.score)
+    this.tweetService.getSentimentData(sv, this.maxTweets).subscribe((jsonResponse) => {
+      this.JsonSentiment = jsonResponse
+      console.log(this.JsonSentiment);
+      var negScore = 0, nneg = 0;
+      var posScore = 0, npos = 0;
+      var nuetralScore = 0;
+      for (var i = 0; i < this.JsonSentiment.length; i++) {
+        var data = this.JsonSentiment[i];
+        if (data.score.score < 0) {
+          negScore += (data.score.score) * -1;
+          nneg++;
+          console.log(data.score.score)
+        }
+        else if (data.score.score > 0) {
+          posScore += (data.score.score);
+          npos++;
+          console.log(data.score.score)
+        }
+        else nuetralScore++;
       }
-      else if (data.score.score > 0) {
-        posScore += (data.score.score);
-        npos++;
-        console.log(data.score.score)
-      }
-      else nuetralScore++;
+      this.setBarChart([nneg, nuetralScore, npos]);
+      this.setPieChart([negScore, nuetralScore, posScore]);
+
+      this.chartArea.style.display = 'block'
+      this.TableArea.style.display = 'block'
+
+      this.scrollToElement('chart-section')
     }
-    this.setBarChart([nneg, nuetralScore, npos]);
-    this.setPieChart([negScore, nuetralScore, posScore]);
+    );
+    // this.JsonSentiment = Array.of(jsonResponse);
 
-    this.chartArea.style.display = 'block'
-    this.TableArea.style.display = 'block'
 
-    this.scrollToElement('chart-section')
+
 
   }
 
@@ -119,19 +124,20 @@ export class SearchComponent implements OnInit {
         }]
       },
       options: {
-        responsive: false,
         scales: {
           xAxes: [{
             gridLines: {
-              display:false
+              display: false
             }
-        }],
+          }],
           yAxes: [{
+            stacked: true,
+
             ticks: {
               beginAtZero: true
             },
             gridLines: {
-              display:true
+              display: true
             }
           }]
         }
@@ -139,11 +145,11 @@ export class SearchComponent implements OnInit {
     });
   }
 
-  togglePopup(){
+  togglePopup() {
     document.getElementById("popup-1").classList.toggle("active");
   }
-  setMaxTweets(max){
-    this.maxTweets=max
+  setMaxTweets(max) {
+    this.maxTweets = max
     document.getElementById("popup-1").classList.toggle("active");
   }
 }

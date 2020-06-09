@@ -17,8 +17,12 @@
             </ng-container>
             <ng-template #elseTemplate>
                 <li>
+                    <a (click)="showHistory()">{{username}}</a>
+                </li>
+                <li>
                     <a (click)="onLogout()">Log Out</a>
                 </li>
+
             </ng-template>
 
         </ul>

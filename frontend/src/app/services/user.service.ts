@@ -46,12 +46,18 @@ export class UserService {
   setToken(token: string) {
     localStorage.setItem('token', token)
   }
-  setUser(user){
-    localStorage.setItem('user',user)
+  setUser(username){
+    console.log(username)
+    localStorage.setItem('username',username)
+  }
+  getUserName(){
+    return localStorage.getItem('username')
   }
 
   deleteToken() {
     localStorage.removeItem('token')
+    localStorage.removeItem('username')
+    
   }
 
   getUserPayload() {
@@ -73,6 +79,9 @@ export class UserService {
       return false
   }
 
+  getHistory(){
+    return this.http.get(environment.apiBaseUrl + '/users')
+  }
 
 
 }

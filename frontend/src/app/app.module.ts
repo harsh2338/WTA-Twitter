@@ -24,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatDialogModule} from '@angular/material/dialog';
 import { LiveComponent } from './modules/after-login/live/live.component';
+import { HistoryComponent } from './modules/after-login/history/history.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { LiveComponent } from './modules/after-login/live/live.component';
     SearchComponent,
     HeaderComponent,
     LiveComponent,
+    HistoryComponent,
   ],
   imports: [
     BrowserModule,

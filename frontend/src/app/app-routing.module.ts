@@ -8,6 +8,7 @@ import {HomeComponent} from './modules/after-login/home/home.component';
 import {AuthGuard} from '../app/modules/auth/auth.guard'
 import {SearchComponent} from '../app/modules/after-login/search/search.component';
 import { LiveComponent } from './modules/after-login/live/live.component';
+import { HistoryComponent } from './modules/after-login/history/history.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/home',pathMatch:'full'},
@@ -31,7 +32,12 @@ const routes: Routes = [
   {
     path:'live',component:LiveComponent,
     canActivate:[AuthGuard]
+  },
+  {
+    path:'history',component:HistoryComponent,
+    canActivate:[AuthGuard]
   }
+  
 ];
 
 @NgModule({

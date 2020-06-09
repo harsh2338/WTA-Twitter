@@ -47,10 +47,11 @@ router.post("/login", (req, res, next) => {
                         message: "Auth failed"
                     });
                 const token = jwt.sign({ id: user._id, email: user.email, name: user.name }, jwt_key, { expiresIn: "3h" });
+                const username = user.name
                 return res.status(200).json({
                     message: "Auth successful",
                     token,
-                    user
+                    username
                 });
             });
         })

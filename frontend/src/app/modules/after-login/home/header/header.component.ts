@@ -19,8 +19,9 @@ export class HeaderComponent implements OnInit {
     private userService: UserService,
     private router : Router
     ) { }
-
+    username;
   ngOnInit() {
+    this.username=this.userService.getUserName()
   }
   moveToSection(id) {
     console.log(id)
@@ -38,6 +39,9 @@ export class HeaderComponent implements OnInit {
   }
   isLoggedIn(){
     return ! this.userService.isLoggedIn()
+  }
+  showHistory(){
+    this.router.navigate(['/history'])
   }
 
 
