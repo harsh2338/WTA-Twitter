@@ -1,43 +1,41 @@
-<p>live works!</p>
+<div style="width: 100%;height: 100%;">
+    <div id="tweet-applicaton">
+        <div class="column left">
+            <div id="tweet-window">
+                <div id="output" *ngFor="let data of output">
+                    <p><strong>{{data.tweet.user.screen_name}} : </strong>{{data.tweet.full_text}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="column right">
+            <h1>Live Analysis of Tweets</h1>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col" style="max-width: 150px;">Total Comparative</th>
+                            <th scope="col" style="max-width: 150px;">Positive</th>
+                            <th scope="col" style="max-width: 150px;">Neutral</th>
+                            <th scope="col" style="max-width: 150px;">Negative</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Total Comparative" style="max-width: 150px;">{{totScore.toFixed(3)}}</td>
+                            <td data-label="Positive" style="max-width: 150px;">{{positives}}</td>
+                            <td data-label="Neutral">{{neutrals}}</td>
+                            <td data-label="Negative">{{negatives}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input id="handle" type="text" [(ngModel)]="hashTag" placeholder="#hashTag" />
+            <div>
+                <button id="send" (click)="setStream()">Submit</button>
+                <button (click)="disconnect()">Stop</button>
+                <button (click)="reconnect()">Reconnect</button>
+            </div>
 
-
-<!-- header {
-    background-color: greenyellow;
-    padding: 20px 0;
-}
-
-ul li {
-    list-style-type: none;
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.sticky-nav {
-    width: 98%;
-    float: left;
-    padding: 10px;
-    width: 100%;
-    background: #000;
-}
-
-.sticky-nav ul {
-    padding: 0px;
-    margin: 0px;
-}
-
-.sticky-box-shadow {
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
-    width: 100%;
-    background: #000!important;
-    color: #fff;
-}
-
-.sticky-nav ul li {
-    float: left;
-    margin-right: 20px;
-    list-style-type: none;
-}
-
-a {
-    cursor: pointer;
-} -->
+        </div>
+    </div>
+</div>

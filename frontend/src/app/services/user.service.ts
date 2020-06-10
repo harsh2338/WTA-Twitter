@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment'
 })
 export class UserService {
   selectedUser: User = {
-    username: '',
+    name: '',
     email: '',
     password: '',
   }
@@ -17,42 +17,49 @@ export class UserService {
   noAuthHeader = {
     headers: new HttpHeaders({
       'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT'
+      'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT',
+      'NoAuth':'True'
     })
   };
 
   constructor(private http: HttpClient) { }
 
-  GetPost(){
-    return  fetch(environment.apiBaseUrl + '/tweets?tag=%23corona&maxTweets=10');
-
-  }
   registerUser(user: User) {
-    // fetch(environment.apiBaseUrl + '/signup', { mode: 'no-cors' });
-    return this.http.get(environment.apiBaseUrl+'/tweets?tag=%23corona&maxTweets=10')
-    // return this.http.post(environment.apiBaseUrl + '/signup', user, this.noAuthHeader)
+    return this.http.post(environment.apiBaseUrl + '/auth/signup', user, this.noAuthHeader)
   }
 
   login(authcreds) {
-    return this.http.post(environment.apiBaseUrl + '/login', authcreds, this.noAuthHeader)
+    return this.http.post(environment.apiBaseUrl + '/auth/login', authcreds, this.noAuthHeader)
   }
 
 
-  getUserProfile() {
-    return this.http.get(environment.apiBaseUrl + '/profile');
-  }
+
+
+
+
+
 
   getToken() {
     return localStorage.getItem('token')
   }
 
   setToken(token: string) {
-    localStorage.set('token', token)
+    localStorage.setItem('token', token)
+  }
+  setUser(username){
+    console.log(username)
+    localStorage.setItem('username',username)
+  }
+  getUserName(){
+    return localStorage.getItem('username')
   }
 
   deleteToken() {
     localStorage.removeItem('token')
+    localStorage.removeItem('username')
+    
   }
+
   getUserPayload() {
     var token = this.getToken();
     if (token) {
@@ -72,6 +79,9 @@ export class UserService {
       return false
   }
 
+  getHistory(){
+    return this.http.get(environment.apiBaseUrl + '/users')
+  }
 
 
 }

@@ -13,21 +13,6 @@ img {
     margin-right: auto;
 }
 
-* {
-    outline: none;
-}
-
-html,
-body {
-    height: 100%;
-    min-height: 100%;
-}
-
-body {
-    margin: 0;
-    background-color: #00acee;
-}
-
 .tb {
     display: table;
     width: 100%;
@@ -53,13 +38,26 @@ button {
     top: 50%;
     left: 0;
     right: 0;
-    width: 550px;
+    width: 50%;
+    float: right;
     padding: 35px;
     margin: -83px auto 0 auto;
     background-color: #00acee;
     border-radius: 20px;
     box-shadow: 0 10px 40px #00acee, 0 0 0 20px #ffffffeb;
     transform: scale(0.6);
+}
+
+#search-section {
+    width: 100%;
+    float: left;
+    background-color: red
+}
+
+#select_max {
+    width: 50%;
+    float: right;
+    background-color: black;
 }
 
 form {
@@ -165,81 +163,6 @@ button span:after {
     background-color: #fff;
 }
 
-.dropdown-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 40px 0 0 0;
-}
-
-.dropdown {
-    background: #f8f8f8;
-    padding: 10px;
-    border-radius: 3px;
-    width: 140px;
-    display: flex;
-    justify-content: space-around;
-    font-size: 1.1rem;
-    cursor: pointer;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
-}
-
-.fa-angle-down {
-    position: relative;
-    top: 2px;
-    font-size: 1.3rem;
-    transition: transform 0.3s ease;
-}
-
-.rotate-dropdown-arrow {
-    transform: rotate(-180deg);
-}
-
-.dropdown-menu {
-    display: none;
-    flex-direction: column;
-    border-radius: 4px;
-    margin-top: 8px;
-    width: 160px;
-    padding: 10px;
-    box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.3);
-    background: #fafafa;
-    transform-origin: top left;
-}
-
-.dropdown-menu span {
-    padding: 10px;
-    flex-grow: 1;
-    width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.dropdown-menu span:last-child {
-    border: none;
-}
-
-.dropdown-menu span:hover {
-    background: #eee;
-}
-
-#openDropdown:checked+.dropdown-menu {
-    display: flex;
-    animation: openDropDown 0.4s ease;
-}
-
-@keyframes openDropDown {
-    from {
-        transform: rotateX(50deg);
-    }
-    to {
-        transform: rotateX(0deg);
-    }
-}
-
 table {
     border: 1px solid #ccc;
     border-collapse: collapse;
@@ -340,4 +263,65 @@ h1 {
     text-align: center;
     padding: 10px;
     margin: 10px;
+}
+
+.popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+
+.popup .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 500px;
+    height: 250px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .content {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+#chart-section {
+    margin: 20px;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
 }
