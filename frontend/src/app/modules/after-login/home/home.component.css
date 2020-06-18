@@ -108,3 +108,18 @@
           margin: 0.4em auto;
       }
   }
+  
+  @media screen and (max-width: 1000px) {
+      #live-left {
+          display: none
+      }
+      #live-right {
+          width: 100%;
+      }
+      #sent-left {
+          display: none
+      }
+      #sent-right {
+          width: 100%;
+      }
+  }

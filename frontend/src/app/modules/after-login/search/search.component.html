@@ -3,12 +3,12 @@
     <div class="content">
         <!-- <span (click)="togglePopup()" id="max_tweets">200</span> -->
         <div class="grid-container">
-            <div class="grid-item" (click)="setMaxTweets(10)">10</div>
-            <div class="grid-item" (click)="setMaxTweets(20)">20</div>
-            <div class="grid-item" (click)="setMaxTweets(50)">50</div>
-            <div class="grid-item" (click)="setMaxTweets(100)">100</div>
-            <div class="grid-item" (click)="setMaxTweets(150)">150</div>
             <div class="grid-item" (click)="setMaxTweets(200)">200</div>
+            <div class="grid-item" (click)="setMaxTweets(300)">300</div>
+            <div class="grid-item" (click)="setMaxTweets(500)">500</div>
+            <div class="grid-item" (click)="setMaxTweets(700)">700</div>
+            <div class="grid-item" (click)="setMaxTweets(900)">900</div>
+            <div class="grid-item" (click)="setMaxTweets(1000)">1000</div>
         </div>
     </div>
 </div>
@@ -42,14 +42,14 @@
 
 
 <div class="main" id="chart-section">
-    <div class="column left">
+    <div class="column left" id="pie-chart">
         <h2>Sentiment Score</h2>
         <div id="divChart">
             <canvas id="sentimentChart">
                 </canvas>
         </div>
     </div>
-    <div class="column right">
+    <div class="column right" id="bar-chart">
         <h2>Number of Tweets</h2>
         <div id="divBar">
             <canvas id="noChart">
