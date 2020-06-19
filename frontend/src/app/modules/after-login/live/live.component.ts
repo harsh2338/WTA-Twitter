@@ -51,9 +51,11 @@ export class LiveComponent implements OnInit {
   }
 
   disconnect(){
+
     this.webSocketService.socket.disconnect();
   }
   reconnect() {
+    this.output=[]
     this.webSocketService.socket.connect();
     this.setStream();
 }
