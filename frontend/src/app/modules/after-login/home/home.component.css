@@ -1,0 +1,125 @@
+  #main-section {
+      width: 100%;
+      height: 100vh;
+      background: url('../../../../assets/img/mainbackground.png') no-repeat center center;
+      background-size: cover;
+      overflow: hidden;
+  }
+  
+  #search-section {
+      width: 100%;
+      height: 100vh;
+      background-color: aqua;
+      background-size: cover;
+      overflow: hidden;
+  }
+  
+  #live-section {
+      width: 100%;
+      height: 100vh;
+      background-color: firebrick;
+      background-size: cover;
+      overflow: hidden;
+  }
+  
+  .column {
+      float: left;
+      width: 50%;
+      background-size: cover;
+  }
+  
+  .left-sentiment {
+      width: 50%;
+      height: 100vh;
+      background: url('../../../../assets/img/sentiment-analysis.png') no-repeat center center;
+      background-size: cover;
+      overflow: visible;
+  }
+  
+  .left-live {
+      width: 50%;
+      height: 100vh;
+      background: url('../../../../assets/img/hash.jpg') no-repeat center center;
+      background-size: cover;
+      overflow: visible;
+  }
+  
+  .right-sentiment {
+      width: 50%;
+      height: 100vh;
+      background-color: #BFE6F5;
+      background-size: cover;
+      overflow: hidden;
+  }
+  
+  .right-live {
+      width: 50%;
+      height: 100vh;
+      background-color: #EDCDED;
+      background-size: cover;
+      overflow: hidden;
+  }
+  
+  h1 {
+      font-size: 66px;
+      text-transform: capitalize;
+      color: black;
+  }
+  
+  h2 {
+      font-size: 46px;
+      text-transform: capitalize;
+      color: black;
+  }
+  
+  p {
+      text-align: center;
+      font-size: 25px;
+  }
+  
+  a.button2 {
+      display: inline-block;
+      padding: 0.5em 3em;
+      border: 0.16em solid #00829C;
+      margin: 0 0.3em 0.3em 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      color: #00829C;
+      text-align: center;
+      transition: all 0.15s;
+  }
+  
+  a.button2:hover {
+      color: #0047AB;
+      border-color: #0047AB;
+  }
+  
+  a.button2:active {
+      color: #BBBBBB;
+      border-color: #BBBBBB;
+  }
+  
+  @media all and (max-width:30em) {
+      a.button2 {
+          display: block;
+          margin: 0.4em auto;
+      }
+  }
+  
+  @media screen and (max-width: 1000px) {
+      #live-left {
+          display: none
+      }
+      #live-right {
+          width: 100%;
+      }
+      #sent-left {
+          display: none
+      }
+      #sent-right {
+          width: 100%;
+      }
+  }

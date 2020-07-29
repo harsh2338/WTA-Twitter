@@ -1,0 +1,79 @@
+<div class="popup" id="popup-1">
+    <div class="overlay"></div>
+    <div class="content">
+        <!-- <span (click)="togglePopup()" id="max_tweets">200</span> -->
+        <div class="grid-container">
+            <div class="grid-item" (click)="setMaxTweets(200)">200</div>
+            <div class="grid-item" (click)="setMaxTweets(300)">300</div>
+            <div class="grid-item" (click)="setMaxTweets(500)">500</div>
+            <div class="grid-item" (click)="setMaxTweets(700)">700</div>
+            <div class="grid-item" (click)="setMaxTweets(900)">900</div>
+            <div class="grid-item" (click)="setMaxTweets(1000)">1000</div>
+        </div>
+    </div>
+</div>
+
+<div style="width: 100%;height: 100%;">
+
+    <img src="../../../assets/img/bird.png" class="fadeInDown">
+
+    <div style="align-items: center;">
+        <h1>Twitter Sentiment Analysis</h1>
+        <p style="font-size: large;text-align: center;">Search for a hashtag and get the analysis of <span (click)="togglePopup()" id="max_tweets">{{maxTweets}}</span> tweets</p>
+    </div>
+    <div id="search-section">
+        <div id="cover">
+            <form method="get" action="">
+                <div class="tb">
+                    <div class="td">
+                        <input type="text" placeholder="#hashtag" #searchtext style="color: black;" required>
+                    </div>
+                    <div class="td" id="s-cover">
+                        <button (click)="searchText(searchtext)" type="submit">
+                                <div id="s-circle"></div>
+                                <span></span>
+                            </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="main" id="chart-section">
+    <div class="column left" id="pie-chart">
+        <h2>Sentiment Score</h2>
+        <div id="divChart">
+            <canvas id="sentimentChart">
+                </canvas>
+        </div>
+    </div>
+    <div class="column right" id="bar-chart">
+        <h2>Number of Tweets</h2>
+        <div id="divBar">
+            <canvas id="noChart">
+                </canvas>
+        </div>
+    </div>
+</div>
+
+<div class="main" id="table-section" style="padding:100px">
+    <table>
+        <caption>Tabular Analysis</caption>
+        <thead>
+            <tr>
+                <th scope="col" style="max-width: 150px;">Score</th>
+                <th scope="col" style="max-width: 150px;">Comparative</th>
+                <th scope="col">Tweet</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of JsonSentiment ">
+                <td data-label="Score" style="max-width: 150px;">{{data.score.score}}</td>
+                <td data-label="Comparative" style="max-width: 150px;">{{data.score.comparative}}</td>
+                <td data-label="Tweet">{{data.full_text}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

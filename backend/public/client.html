@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sockets Client</title>
+</head>
+
+
+<body>
+    <h1>Sockets</h1>
+    <button onclick="disconnect()">STOP</button>
+    <button onclick="reconnect()">Connect</button><br><br>
+    <input type="text" placeholder="modi" id="q"><br><br>
+    <button onclick="setStream()">submit</button>
+    <p id="score"></p>
+    <p id="tweets"></p>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+    <script>
+        fetch('http://localhost:3000/tweets/?tag=%23coronavirus&maxTweets=3').then(data => {
+            data.json().then(res => console.log(res))
+        });
+        let socket = io('http://localhost:3000/');
+        let tot_score = 0,
+            positives = 0,
+            negatives = 0,
+            neutrals = 0,
+            offset = 0.1;
+
+        socket.on('tweets', (data) => {
+            tot_score += data.tweet.score.comparative;
+            if (data.tweet.score.comparative > offset) positives++;
+            else if (data.tweet.score.comparative < 0) negatives++;
+            else neutrals++;
+            let score = document.getElementById('score');
+            score.innerHTML = `TOTAL : ${tot_score.toFixed(2)} POSITIVES : ${positives} NEUTRALS : ${neutrals} NEGATIVES : ${negatives}`;
+            let tweets = document.getElementById('tweets')
+            tweets.innerHTML = data.tweet.full_text + "</br>" + "SCORE : " + data.tweet.score.score + "</br></br>" + tweets.innerHTML;
+        });
+
+        function reconnect() {
+            socket.connect();
+            setStream();
+        }
+
+        function disconnect() {
+            socket.disconnect();
+        }
+
+        function setStream() {
+            socket.emit('setStream', document.getElementById('q').value);
+            tot_score = 0, positives = 0, negatives = 0, neutrals = 0;
+        }
+    </script>
+</body>
+
+</html>

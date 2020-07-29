@@ -9,8 +9,6 @@ import { AppComponent } from './app.component';
 import { SignInComponent } from './modules/user/sign-in/sign-in.component';
 import { UserComponent } from './modules/user/user.component';
 import { SignUpComponent } from './modules/user/sign-up/sign-up.component';
-import { from } from 'rxjs';
-import { UserProfileComponent } from './modules/user-profile/user-profile.component';
 import {AuthGuard} from '../app/modules/auth/auth.guard'
 import { UserService } from './services/user.service';
 
@@ -23,14 +21,13 @@ import { HeaderComponent } from './modules/afterlogin/home/header/header.compone
     SignInComponent,
     UserComponent,
     SignUpComponent,
-    UserProfileComponent,
     HeaderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
 
   ],
   providers: [{
@@ -38,6 +35,7 @@ import { HeaderComponent } from './modules/afterlogin/home/header/header.compone
     useClass:AuthInterceptor,
     multi:true
   },AuthGuard,UserService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[UserComponent],
 })
 export class AppModule { }

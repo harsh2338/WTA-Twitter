@@ -1,0 +1,169 @@
+* {
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 46px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+#tweet-applicaton {
+    /* max-width: 100%; */
+    margin: 30px;
+    /* max-height: 100%; */
+}
+
+#tweet-window {
+    height: 90%;
+    overflow: auto;
+    border-radius: 5px;
+    background-color: #e6dfb7;
+    padding: 10px;
+    margin: 10px;
+}
+
+#output p {
+    padding: 14px 0px 0 0;
+    margin: 0 20px;
+    color: #555;
+}
+
+#output strong {
+    color: #097e92;
+}
+
+label {
+    box-sizing: border-box;
+    display: block;
+    padding: 10px;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+    background: #eee;
+    border: 0;
+    display: block;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+}
+
+button {
+    background: #9c64c9;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    padding: 12px;
+    margin: 10px;
+    width: 100%;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1c0a46;
+    color: #fff;
+    font-size: 18px;
+    padding: 12px;
+    margin: 10px;
+    width: 100%;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.column {
+    align-items: center;
+    float: left;
+    width: 50%;
+    background-size: cover;
+}
+
+.left {
+    width: 70%;
+    height: 100vh;
+    background-size: cover;
+    overflow: visible;
+}
+
+.right {
+    width: 30%;
+    height: 100vh;
+    background-size: cover;
+    overflow: hidden;
+}
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+
+table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+}
+
+table th,
+table td {
+    padding: .625em;
+    text-align: center;
+}
+
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
+    table caption {
+        font-size: 1.3em;
+    }
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+    table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    table td:last-child {
+        border-bottom: 0;
+    }
+}
