@@ -10,7 +10,6 @@ import * as $ from 'jquery';
 export class HomeComponent implements OnInit {
   ngOnInit() {
     
-
   //   $(document).ready(function(){
   //     $("a").on('click', function(event) {
     

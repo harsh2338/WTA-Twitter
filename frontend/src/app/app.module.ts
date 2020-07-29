@@ -14,7 +14,8 @@ import { UserProfileComponent } from './modules/user-profile/user-profile.compon
 import {AuthGuard} from '../app/modules/auth/auth.guard'
 import { UserService } from './services/user.service';
 
-import {AuthInterceptor} from './modules/auth/auth.interceptor'
+import {AuthInterceptor} from './modules/auth/auth.interceptor';
+import { HeaderComponent } from './modules/afterlogin/home/header/header.component'
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {AuthInterceptor} from './modules/auth/auth.interceptor'
     UserComponent,
     SignUpComponent,
     UserProfileComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
